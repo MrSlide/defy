@@ -1,4 +1,8 @@
 {
+  "comments": false,
+  "compact": false,
+  "minified": false,
+  "moduleId": "defy",
   "presets": [
     [
       "es2015", {

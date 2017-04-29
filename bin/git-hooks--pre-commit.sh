@@ -7,4 +7,4 @@ then
   cd ../../
 fi
 
-exec node lint.js
+exec npm run precommit

@@ -5,11 +5,7 @@ const chalk = require('chalk')
 const babel = require('babel-core')
 
 babel.transformFile('lib/index.js', {
-  ast: false,
-  comments: false,
-  compact: false,
-  minified: false,
-  moduleId: 'defy'
+  ast: false
 }, function (err, res) {
   if (err) {
     console.error(chalk.red(err.message))
