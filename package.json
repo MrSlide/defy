@@ -19,7 +19,7 @@
     "precommit": "npm run lint && npm run test",
     "postversion": "git push && git push --tags && npm publish",
     "prepare": "npm run lint && npm run build && npm run test",
-    "preversion": "npm prepare",
+    "preversion": "npm run prepare",
     "test": "node test.js",
     "version": "git add ."
   },
