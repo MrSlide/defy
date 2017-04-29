@@ -7,4 +7,9 @@ then
   cd ../../
 fi
 
-exec npm run precommit
+npmExec=$(which npm)
+
+if [ $gulpExec != "" ]
+then
+  exec $npmExec run precommit
+fi
