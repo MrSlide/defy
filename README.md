@@ -113,6 +113,28 @@ var isColourValid = defy.color('#FFFFFF')
 
 
 
+### creditcard(value: String): Boolean
+
+Verify if a given value is a valid credit card number.
+
+#### Params
+
+| Name                     | Type                     | Description                                                                                                     |
+|--------------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------|
+| value                    | String                   | The value to be validated.                                                                                      |
+
+#### Return
+
+Boolean
+
+#### Example
+
+```
+var isCCValid = defy.creditcard('378282246310005')
+```
+
+
+
 ### email(value: String): Boolean
 
 Verify if a given value is a valid email address.
@@ -408,7 +430,10 @@ var isUrlValid = defy.url('https://www.google.com')
 ## Contributing
 
 If you find any bugs and want to fix them, or if you want to add new features, you're welcome to create a fork of the project and then create a pull request once you're done. The code adheres to the [Standard](https://standardjs.com/) and is unit tested fully. No pull requests will be accepted if the code coverage is below 100% or there are linting errors or warnings.
+
 There are some safe-guards in place to prevent a drop in code quality. When you run `npm install`, a Git hook will also be installed, so that no commits will be possible if the unit tests fail or there are linting problems.
+
+The API documentation should also be kept up to date, and ESDoc tags should be used in the source code.
 
 
 

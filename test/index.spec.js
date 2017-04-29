@@ -31,6 +31,32 @@ describe('The Defy.js library', function () {
   })
 
   /**
+   * @test {defy.creditcard}
+   */
+  it('should be able to validate a credit card number', function () {
+    expect(defy.creditcard('0')).toBe(false)
+    expect(defy.creditcard('328282246310005')).toBe(false)
+    expect(defy.creditcard('51051051e5105100')).toBe(false)
+    expect(defy.creditcard('5105.10510510.5100')).toBe(false)
+    expect(defy.creditcard('4012 - 88888888 - 1881')).toBe(false)
+
+    expect(defy.creditcard('424242424 2424242')).toBe(true)
+    expect(defy.creditcard('4012-88888888-1881')).toBe(true)
+    expect(defy.creditcard('4000056655665556')).toBe(true)
+    expect(defy.creditcard('5555555555554444')).toBe(true)
+    expect(defy.creditcard('5200828282828210')).toBe(true)
+    expect(defy.creditcard('5105105105105100')).toBe(true)
+    expect(defy.creditcard('378282246310005')).toBe(true)
+    expect(defy.creditcard('371449635398431')).toBe(true)
+    expect(defy.creditcard('6011111111111117')).toBe(true)
+    expect(defy.creditcard('6011000990139424')).toBe(true)
+    expect(defy.creditcard('30569309025904')).toBe(true)
+    expect(defy.creditcard('38520000023237')).toBe(true)
+    expect(defy.creditcard('3530111333300000')).toBe(true)
+    expect(defy.creditcard('3566002020360505')).toBe(true)
+  })
+
+  /**
    * @test {defy.color}
    */
   it('should be able to validate a colour in hex format, with either 6 or 3 characters', function () {

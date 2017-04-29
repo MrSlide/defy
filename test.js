@@ -38,7 +38,7 @@ const server = new karma.Server({
     dir: 'coverage',
     reporters: [
       {
-        type: 'lcovonly',
+        type: 'lcov',
         subdir: '.'
       },
       {
