@@ -66,7 +66,7 @@ const server = new karma.Server({
   singleRun: true
 }, function (exitCode) {
   if (process.env.COVERALLS_REPO_TOKEN) {
-    fs.readFile('coverage/lcov.info', function (err, file) {
+    fs.readFile('coverage/lcov.info', 'utf8', function (err, file) {
       if (err) {
         console.error(chalk.red(err.message))
         process.exit(1)

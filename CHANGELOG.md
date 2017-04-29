@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [v0.1.1] - 2017-04-29
+
+### Fixed
+
+- Fixed an error when trying to upload the test coverage results to Coveralls which was causing the build to not pass
+
 
 ## [v0.1.0] - 2017-04-29
 
@@ -29,4 +35,5 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Latest]: https://github.com/MrSlide/defy/tree/master
 [Unreleased]: https://github.com/MrSlide/defy/tree/develop
+[v0.1.1]: https://github.com/MrSlide/defy/tree/0.1.1
 [v0.1.0]: https://github.com/MrSlide/defy/tree/0.1.0
