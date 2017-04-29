@@ -1,10 +1,17 @@
 {
   "name": "defy",
   "version": "0.1.0",
-  "description": "Small JavaScript library for data validation.",
+  "description": "Small JavaScript library for data validation with flexibility in mind.",
+  "engines": {
+    "node": ">=6.10.2"
+  },
   "main": "index.js",
   "jsnext:main": "lib/index.js",
   "module": "lib/index.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
   "scripts": {
     "build": "node build.js",
     "lint": "node lint.js",
