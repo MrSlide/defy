@@ -86,6 +86,7 @@ const server = new karma.Server({
             process.exit(1)
           }
 
+          console.log(body.error ? chalk.red(body.message) : chalk.green(body.message))
           process.exit(0)
         })
       })
