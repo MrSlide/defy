@@ -9,8 +9,11 @@
     "build": "node build.js",
     "lint": "node lint.js",
     "test": "node test.js",
-    "postinstall": "mkdir -p .git/hooks; cp bin/git-hooks--pre-commit.sh .git/hooks/pre-commit; chmod +x .git/hooks/pre-commit",
-    "prepare": "npm run lint; npm run build; npm run test"
+    "postinstall": "mkdir -p .git/hooks && cp bin/git-hooks--pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
+    "prepare": "npm run lint && npm run build && npm run test",
+    "preversion": "npm prepare",
+    "version": "git add .",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "keywords": [
     "defy",
