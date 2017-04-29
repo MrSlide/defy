@@ -15,11 +15,11 @@
   "scripts": {
     "build": "node build.js",
     "lint": "node lint.js",
-    "postinstall": "mkdir -p .git/hooks && cp bin/git-hooks--pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
-    "precommit": "npm run lint && npm run test",
+    "setupprecommithook": "mkdir -p .git/hooks && cp bin/git-hooks--pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
+    "precommit": "npm run build && npm run lint && npm run test",
     "postversion": "git push && git push --tags && npm publish",
-    "prepare": "npm run lint && npm run build && npm run test",
-    "preversion": "npm run prepare",
+    "prepare": "npm run setupprecommithook && npm run lint && npm run build && npm run test",
+    "preversion": "npm run build",
     "test": "node test.js",
     "version": "git add ."
   },
