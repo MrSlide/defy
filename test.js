@@ -1,8 +1,6 @@
 'use strict'
 
-const fs = require('fs')
 const chalk = require('chalk')
-const coveralls = require('coveralls')
 const karma = require('karma')
 const server = new karma.Server({
   autoWatch: false,
@@ -59,41 +57,10 @@ const server = new karma.Server({
     'lib/**/*.js': ['babel'],
     'test/**/*.spec.js': ['babel']
   },
-  reporters: [
-    'spec',
-    'coverage'
-  ],
+  reporters: process.env.COVERALLS_REPO_TOKEN ? ['spec', 'coverage', 'coveralls'] : ['spec', 'coverage'],
   singleRun: true
 }, function (exitCode) {
-  if (process.env.COVERALLS_REPO_TOKEN) {
-    fs.readFile('coverage/lcov.info', 'utf8', function (err, file) {
-      if (err) {
-        console.error(chalk.red(err.message))
-        process.exit(1)
-      }
-
-      coveralls.convertLcovToCoveralls(file, {
-        filepath: '.'
-      }, function (err, coverallsData) {
-        if (err) {
-          console.error(chalk.red(err.message))
-          process.exit(1)
-        }
-
-        coveralls.sendToCoveralls(coverallsData, function (err, response, body) {
-          if (err) {
-            console.error(chalk.red(err.message))
-            process.exit(1)
-          }
-
-          console.log(body.error ? chalk.red(body.message) : chalk.green(body.message))
-          process.exit(0)
-        })
-      })
-    })
-  } else {
-    process.exit(exitCode)
-  }
+  process.exit(exitCode)
 })
 
 try {
