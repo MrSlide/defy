@@ -13,14 +13,9 @@ babel.transformFile('lib/index.js', {
   }
 
   try {
-    if (!fs.statSync('dist').isDirectory()) {
-      fs.mkdirSync('dist')
-    }
+    fs.accessSync('dist')
   } catch (err) {
-    if (err) {
-      console.error(chalk.red(err.message))
-      process.exit(1)
-    }
+    fs.mkdirSync('dist')
   }
 
   fs.writeFile('dist/index.js', res.code, function (err) {
