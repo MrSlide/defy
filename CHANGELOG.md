@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [v0.1.3] - 2017-04-30
+
+### Changed
+
+- Changed how the unit test coverage report is sent to Coveralls
+
+### Fixed
+
+- The main Node module now exports the correct object
+- Fixed build errors related to the build directory not existing
+
+
 ## [v0.1.2] - 2017-04-29
 
 ### Fixed
@@ -43,6 +56,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Latest]: https://github.com/MrSlide/defy/tree/master
 [Unreleased]: https://github.com/MrSlide/defy/tree/develop
-[v0.1.2]: https://github.com/MrSlide/defy/tree/0.1.2
-[v0.1.1]: https://github.com/MrSlide/defy/tree/0.1.1
-[v0.1.0]: https://github.com/MrSlide/defy/tree/0.1.0
+[v0.1.3]: https://github.com/MrSlide/defy/tree/v0.1.3
+[v0.1.2]: https://github.com/MrSlide/defy/tree/v0.1.2
+[v0.1.1]: https://github.com/MrSlide/defy/tree/v0.1.1
+[v0.1.0]: https://github.com/MrSlide/defy/tree/v0.1.0

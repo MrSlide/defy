@@ -9,7 +9,7 @@
 [![Standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![license](https://img.shields.io/github/license/mrslide/defy.svg)](https://github.com/MrSlide/defy)
 
-Small JavaScript library for data validation with flexibility in mind. It won't decide how you do form validation or present error messages. You simply provide some value to validate, and it will tell you if it is value or not.
+Small JavaScript library for data validation with flexibility in mind. It won't decide how you do form validation or present error messages. You simply provide some value to validate, and it will tell you if it is valid or not.
 
 
 
