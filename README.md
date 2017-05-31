@@ -135,6 +135,50 @@ var isCCValid = defy.creditcard('378282246310005')
 
 
 
+### date(value: String): Boolean
+
+Verify if a given value is a valid date.
+
+#### Params
+
+| Name                     | Type                     | Description                                                                                                     |
+|--------------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------|
+| value                    | String                   | The value to be validated.                                                                                      |
+
+#### Return
+
+Boolean
+
+#### Example
+
+```
+var isDateValid = defy.date('2017-05-31')
+```
+
+
+
+### date(value: String): Boolean
+
+Verify if a given date exists. The value must be a valid date string and pass the `defy.date()` validation.
+
+#### Params
+
+| Name                     | Type                     | Description                                                                                                     |
+|--------------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------|
+| value                    | String                   | The value to be validated.                                                                                      |
+
+#### Return
+
+Boolean
+
+#### Example
+
+```
+var dateExists = defy.dateExists('2017-05-31')
+```
+
+
+
 ### email(value: String): Boolean
 
 Verify if a given value is a valid email address.
