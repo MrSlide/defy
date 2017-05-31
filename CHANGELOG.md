@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v0.2.1] - 2017-05-31
+### Fixed
+
+- The documentation now shows the correct function name for `defy.dateExists()`.
+- The change log has missing release tag links.
+
+
 ## [v0.2.0] - 2017-05-31
 ### Added
 
@@ -63,6 +70,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Latest]: https://github.com/MrSlide/defy/tree/master
 [Unreleased]: https://github.com/MrSlide/defy/tree/develop
+[v0.2.1]: https://github.com/MrSlide/defy/tree/v0.2.1
+[v0.2.0]: https://github.com/MrSlide/defy/tree/v0.2.0
 [v0.1.3]: https://github.com/MrSlide/defy/tree/v0.1.3
 [v0.1.2]: https://github.com/MrSlide/defy/tree/v0.1.2
 [v0.1.1]: https://github.com/MrSlide/defy/tree/v0.1.1
