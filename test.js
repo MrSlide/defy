@@ -7,6 +7,9 @@ const server = new karma.Server({
   babelPreprocessor: {
     options: {
       sourceMap: 'inline',
+      presets: [
+        'es2015'
+      ],
       plugins: [
         [
           'istanbul',
