@@ -1,16 +1,7 @@
 {
+  "ast": false,
   "comments": false,
   "compact": false,
   "minified": false,
-  "moduleId": "defy",
-  "presets": [
-    [
-      "es2015", {
-        "modules": false
-      }
-    ]
-  ],
-  "plugins": [
-    "transform-es2015-modules-umd"
-  ]
+  "moduleId": "defy"
 }

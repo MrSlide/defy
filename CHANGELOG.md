@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v0.2.2] - 2017-05-31
+### Fixed
+
+- The ES module now is transpiled to ES5 for better compatibility and avoiding issues with UglifyJs.
+
+
 ## [v0.2.1] - 2017-05-31
 ### Fixed
 
