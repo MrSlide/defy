@@ -76,6 +76,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Latest]: https://github.com/MrSlide/defy/tree/master
 [Unreleased]: https://github.com/MrSlide/defy/tree/develop
+[v0.2.2]: https://github.com/MrSlide/defy/tree/v0.2.2
 [v0.2.1]: https://github.com/MrSlide/defy/tree/v0.2.1
 [v0.2.0]: https://github.com/MrSlide/defy/tree/v0.2.0
 [v0.1.3]: https://github.com/MrSlide/defy/tree/v0.1.3
