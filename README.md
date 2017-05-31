@@ -157,7 +157,7 @@ var isDateValid = defy.date('2017-05-31')
 
 
 
-### date(value: String): Boolean
+### dateExists(value: String): Boolean
 
 Verify if a given date exists. The value must be a valid date string and pass the `defy.date()` validation.
 
