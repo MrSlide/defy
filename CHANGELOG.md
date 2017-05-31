@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v0.2.0] - 2017-05-31
+### Added
+
+- Added date value validation through `defy.date()`
+- Added date existence validation through `defy.dateExists()`
+
+
 ## [v0.1.3] - 2017-04-30
 
 ### Changed

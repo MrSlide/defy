@@ -68,6 +68,39 @@ describe('The Defy.js library', function () {
   })
 
   /**
+   * @test {defy.dateExists}
+   */
+  it('should be able to validate if a date in a valid format exists in the calendar', function () {
+    expect(defy.dateExists('2015-11-31')).toBe(false)
+
+    expect(defy.dateExists('2015-11-30')).toBe(true)
+  })
+
+  /**
+   * @test {defy.date}
+   */
+  it('should be able to validate a date as defined in RFC3339', function () {
+    expect(defy.date('25-11-2015')).toBe(false)
+    expect(defy.date('11-25-2015')).toBe(false)
+    expect(defy.date('25-2015-11')).toBe(false)
+    expect(defy.date('11-2015-25')).toBe(false)
+    expect(defy.date('2015-25-11')).toBe(false)
+    expect(defy.date('2015-13-25')).toBe(false)
+    expect(defy.date('2015-11-32')).toBe(false)
+    expect(defy.date('20151125')).toBe(false)
+    expect(defy.date('2015 11 25')).toBe(false)
+    expect(defy.date('2015/11/25')).toBe(false)
+    expect(defy.date('2015-1-25')).toBe(false)
+    expect(defy.date('2015-01-5')).toBe(false)
+    expect(defy.date('15-01-5')).toBe(false)
+
+    expect(defy.date('2015-11-25')).toBe(true)
+    expect(defy.date('2015-01-25')).toBe(true)
+    expect(defy.date('2015-01-05')).toBe(true)
+    expect(defy.date('0015-01-05')).toBe(true)
+  })
+
+  /**
    * @test {defy.email}
    */
   it('should be able to validate an email address', function () {
