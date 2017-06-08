@@ -252,9 +252,10 @@ describe('The Defy.js library', function () {
     expect(defy.pattern('Aadsfsf1435', '[a-zA-Z0-9]+')).toBe(true)
     expect(defy.pattern('asdsdf', '[a-zA-Z0-9]+')).toBe(true)
     expect(defy.pattern('567653456', '[a-zA-Z0-9]+')).toBe(true)
+    expect(defy.pattern('E14 3GJ', '^[0-9A-Z]{2,6}([ -]?[0-9A-Z]{2,6})?')).toBe(true)
 
-    expect(defy.pattern('567653456.', '[a-zA-Z0-9]+')).toBe(false)
-    expect(defy.pattern('5676 53456', '[a-zA-Z0-9]+')).toBe(false)
+    expect(defy.pattern('567653456.', '^[a-zA-Z0-9]+$')).toBe(false)
+    expect(defy.pattern('5676 53456', '^[a-zA-Z0-9]+$')).toBe(false)
   })
 
   /**
