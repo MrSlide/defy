@@ -1,6 +1,6 @@
 {
   "name": "defy",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Small JavaScript library for data validation with flexibility in mind.",
   "engines": {
     "node": ">=6.10.2",
