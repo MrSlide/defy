@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v0.3.0] - 2017-06-22
+### Added
+
+- Added age validation based on date of birth through `defy.age()`
+
+
+
 ## [v0.2.3] - 2017-06-08
 ### Fixed
 
@@ -83,6 +90,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Latest]: https://github.com/MrSlide/defy/tree/master
 [Unreleased]: https://github.com/MrSlide/defy/tree/develop
+[v0.3.0]: https://github.com/MrSlide/defy/tree/v0.3.0
 [v0.2.3]: https://github.com/MrSlide/defy/tree/v0.2.3
 [v0.2.2]: https://github.com/MrSlide/defy/tree/v0.2.2
 [v0.2.1]: https://github.com/MrSlide/defy/tree/v0.2.1

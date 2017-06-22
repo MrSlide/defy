@@ -41,6 +41,33 @@ var defy = window.defy
 
 ## Static Public Methods
 
+### age(dob: String[, minAge: Number = 0[, maxAge: Number]]): Boolean | Number
+
+Verify if someone's age falls within a minimum and maximum age values and get the age value.
+
+#### Params
+
+| Name                     | Type                     | Description                                                                                                     |
+|--------------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------|
+| dob                      | String                   | A valid RFC3339 date string representing the date of birth.                                                     |
+| minAge                   | Number                   | The minimum accepted age value.                                                                                 |
+| maxAge                   | Number                   | The maximum accepted age value.                                                                                 |
+
+#### Return
+
+Boolean | Number - Returns `false` if the minimum or maximum age are not valid, or the calculated age if valid.
+
+#### Example
+
+```
+var isAgeValid = defy.age('1999-02-22', 18)
+var userAge = defy.age('1979-06-12')
+```
+
+
+
+## Static Public Methods
+
 ### alphaNumeric(value: String): Boolean
 
 Verify if a given value only contains alpha-numeric characters.

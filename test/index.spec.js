@@ -21,6 +21,30 @@ describe('The Defy.js library', function () {
   })
 
   /**
+   * @test {defy.age}
+   */
+  it('should be able to validate an age', function () {
+    const now = new Date()
+    const edgeDobNextMonth = new Date(now.getFullYear() - 18, now.getMonth() + 1, now.getDate())
+    const edgeDobSameMonthAndDay = new Date(now.getFullYear() - 18, now.getMonth(), now.getDate())
+    const edgeDobSameMonthAndPrevDay = new Date(now.getFullYear() - 18, now.getMonth(), now.getDate() - 1)
+    const edgeDobSameMonthAndNextDay = new Date(now.getFullYear() - 18, now.getMonth(), now.getDate() + 1)
+
+    expect(defy.age(now.toISOString(), 1)).toBe(false)
+    expect(defy.age(edgeDobSameMonthAndNextDay.toISOString(), 18)).toBe(false)
+    expect(defy.age(edgeDobSameMonthAndDay.toISOString(), 0, 17)).toBe(false)
+    expect(defy.age(edgeDobSameMonthAndPrevDay.toISOString(), 0, 17)).toBe(false)
+    expect(defy.age(edgeDobNextMonth.toISOString(), 0, 16)).toBe(false)
+    expect(defy.age(edgeDobNextMonth.toISOString(), 18)).toBe(false)
+
+    expect(defy.age(now.toISOString())).toBe(0)
+    expect(defy.age(now.toISOString(), 0, 18)).toBe(0)
+    expect(defy.age(edgeDobSameMonthAndDay.toISOString(), 18)).toBe(18)
+    expect(defy.age(edgeDobSameMonthAndPrevDay.toISOString(), 18)).toBe(18)
+    expect(defy.age(edgeDobNextMonth.toISOString())).toBe(17)
+  })
+
+  /**
    * @test {defy.alphaNumeric}
    */
   it('should be able to validate if a value contains only alpha numeric characters', function () {
