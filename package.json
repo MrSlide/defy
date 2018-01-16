@@ -3,20 +3,24 @@
   "version": "1.0.0",
   "description": "Small JavaScript library for data validation with flexibility in mind.",
   "engines": {
-    "node": ">=8.0.0",
+    "node": ">=6.10.2",
     "npm": ">=3.0.0"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
+  "jsnext:main": "index.js",
+  "module": "index.js",
   "files": [
     "dist",
     "lib"
   ],
   "scripts": {
     "lint": "node lint.js",
+    "build": "node build.js",
     "setupprecommithook": "mkdir -p .git/hooks && cp bin/git-hooks--pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
-    "precommit": "npm run lint && npm run test",
+    "precommit": "npm run lint && npm run build && npm run test",
     "postversion": "git push && git push --tags && npm publish",
     "prepare": "npm run setupprecommithook && npm run lint && npm run test",
+    "preversion": "npm run build",
     "test": "node test.js",
     "version": "git add ."
   },
