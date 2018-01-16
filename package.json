@@ -6,7 +6,7 @@
     "node": ">=6.10.2",
     "npm": ">=3.0.0"
   },
-  "main": "dist/index.js",
+  "main": "dist/index.umd.js",
   "jsnext:main": "index.js",
   "module": "index.js",
   "files": [
