@@ -270,6 +270,26 @@ describe('The Defy.js library', function () {
   })
 
   /**
+   * @test {defy.password}
+   */
+  it('should be able to validate a password', function () {
+    expect(defy.password('Aadsfsf1435')).toBe(true)
+    expect(defy.password('WowqGY0Gi?oaPnT,MwiJ[kBQ4ID29Hb!')).toBe(true)
+    expect(defy.password('LacZ>76kslKpvD2U,WQDxQVUXt>2C"Dl')).toBe(true)
+
+    expect(defy.password(' Aadsfsf1435')).toBe(false)
+    expect(defy.password('Aadsfsf1435 ')).toBe(false)
+    expect(defy.password('Aadsfs f1435')).toBe(false)
+    expect(defy.password('Aads')).toBe(false)
+    expect(defy.password('Aadsfsdgdé')).toBe(false)
+    expect(defy.password('Aa影fsdgd影')).toBe(false)
+    expect(defy.password('Aa💩fsdgd🤬')).toBe(false)
+    expect(defy.password('ac>76')).toBe(false)
+    expect(defy.password('')).toBe(false)
+    expect(defy.password(' ')).toBe(false)
+  })
+
+  /**
    * @test {defy.pattern}
    */
   it('should be able to validate a value against a given regular expression', function () {
