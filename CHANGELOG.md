@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v1.1.0] - 2018-01-16
+### Added
+
+- It was a bit naive to remove the UMD module distribution. UMD module added back.
+
+
+
 ## [v1.0.0] - 2018-01-16
 ### Added
 
@@ -107,6 +114,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Latest]: https://github.com/MrSlide/defy/tree/master
 [Unreleased]: https://github.com/MrSlide/defy/tree/develop
+[v1.1.0]: https://github.com/MrSlide/defy/tree/v1.1.0
 [v1.0.0]: https://github.com/MrSlide/defy/tree/v1.0.0
 [v0.3.0]: https://github.com/MrSlide/defy/tree/v0.3.0
 [v0.2.3]: https://github.com/MrSlide/defy/tree/v0.2.3

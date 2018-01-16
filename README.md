@@ -10,7 +10,6 @@
 [![license](https://img.shields.io/github/license/mrslide/defy.svg)](https://github.com/MrSlide/defy)
 
 Small JavaScript library for data validation with flexibility in mind. It won't decide how you do form validation or present error messages. You simply provide some value to validate, and it will tell you if it is valid or not.
-Defy is written as an ES6 module and requires ES6 module support or a module bundler like Webpack or Browserify to be used.
 
 
 
@@ -24,15 +23,19 @@ npm install defy
 
 ## Usage
 
-Defy is an ES6 module.
+Defy is a UMD and ES6 module.
 
 ```
 // Loading the module in ES6 style
 import * as defy from 'defy'
 
-// It is also possible to only load the required validations when loading the module in ES6 style (this is the preferred way)
+// It is also possible to only load the required validations when loading the module in ES6 style (this is the preferred way when possible)
 import {required, password} from 'defy'
 import {date as defyDate} from 'defy'
+
+// Some module bundlers will give preference to the UMD module instead of the ES6 module.
+// Force loading the ES6 module instead by including the index.js file in the import path.
+import {date as defyDate} from 'defy/index.js'
 
 // Loading the module in CommonJS style
 const defy = require('defy')
