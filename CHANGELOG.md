@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v1.1.1] - 2018-01-16
+### Fixed
+
+- Fixed the path to the main script of the module.
+
+
+
 ## [v1.1.0] - 2018-01-16
 ### Added
 
@@ -114,6 +121,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Latest]: https://github.com/MrSlide/defy/tree/master
 [Unreleased]: https://github.com/MrSlide/defy/tree/develop
+[v1.1.1]: https://github.com/MrSlide/defy/tree/v1.1.1
 [v1.1.0]: https://github.com/MrSlide/defy/tree/v1.1.0
 [v1.0.0]: https://github.com/MrSlide/defy/tree/v1.0.0
 [v0.3.0]: https://github.com/MrSlide/defy/tree/v0.3.0

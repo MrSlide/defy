@@ -4,7 +4,7 @@
  * @name Defy.js
  * @desc Small JavaScript library for data validation.
  * @author Luis Rodrigues (http://www.luisrodriguesweb.com)
- * @version 1.1.0
+ * @version 1.1.1
  * @see https://github.com/MrSlide/defy
  * @license MIT
  */
