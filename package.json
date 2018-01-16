@@ -11,7 +11,7 @@
   "module": "index.js",
   "files": [
     "dist",
-    "lib"
+    "index.js"
   ],
   "scripts": {
     "lint": "node lint.js",
