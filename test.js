@@ -52,13 +52,13 @@ const server = new karma.Server({
     }
   },
   files: [
-    './lib/index.js',
+    './index.js',
     './test/index.spec.js'
   ],
   frameworks: ['jasmine'],
   preprocessors: {
-    'lib/**/*.js': ['babel'],
-    'test/**/*.spec.js': ['babel']
+    './index.js': ['babel'],
+    './test/index.spec.js': ['babel']
   },
   reporters: process.env.COVERALLS_REPO_TOKEN ? ['spec', 'coverage', 'coveralls'] : ['spec', 'coverage'],
   singleRun: true
