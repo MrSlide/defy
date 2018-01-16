@@ -174,6 +174,7 @@ describe('The Defy.js library', function () {
     expect(defy.max(1, 1)).toBe(true)
     expect(defy.max(1, 2)).toBe(true)
     expect(defy.max(-1, 0)).toBe(true)
+    expect(defy.max.call(this, -1, 0)).toBe(true)
     expect(defy.max('2015-11-26', '2015-12-26')).toBe(true)
 
     expect(defy.max('b', 'a')).toBe(false)
@@ -183,6 +184,7 @@ describe('The Defy.js library', function () {
     expect(defy.max('20', '8')).toBe(false)
     expect(defy.max(2, 1)).toBe(false)
     expect(defy.max(-2, -3)).toBe(false)
+    expect(defy.max.call(this, -2, -3)).toBe(false)
     expect(defy.max('2015-11-26', '2015-11-25')).toBe(false)
   })
 
@@ -212,6 +214,7 @@ describe('The Defy.js library', function () {
     expect(defy.min(1, 1)).toBe(true)
     expect(defy.min(2, 1)).toBe(true)
     expect(defy.min(0, -1)).toBe(true)
+    expect(defy.min.call(this, 0, -1)).toBe(true)
     expect(defy.min('2015-12-26', '2015-11-26')).toBe(true)
 
     expect(defy.min('a', 'b')).toBe(false)
@@ -221,6 +224,7 @@ describe('The Defy.js library', function () {
     expect(defy.min('8', '20')).toBe(false)
     expect(defy.min(1, 2)).toBe(false)
     expect(defy.min(-3, -2)).toBe(false)
+    expect(defy.min.call(this, -3, -2)).toBe(false)
     expect(defy.min('2015-11-25', '2015-11-26')).toBe(false)
   })
 

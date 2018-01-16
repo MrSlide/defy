@@ -269,11 +269,11 @@ export function max (value, maxValue) {
   let maxVal = maxValue
 
   if (normalizeValue(val).length !== normalizeValue(maxVal).length) {
-    if (this.number(val)) {
+    if (number(val)) {
       val = parseFloat(val)
     }
 
-    if (this.number(maxVal)) {
+    if (number(maxVal)) {
       maxVal = parseFloat(maxVal)
     }
   }
@@ -333,11 +333,11 @@ export function min (value, minValue) {
   let minVal = minValue
 
   if (normalizeValue(val).length !== normalizeValue(minVal).length) {
-    if (this.number(val)) {
+    if (number(val)) {
       val = parseFloat(val)
     }
 
-    if (this.number(minVal)) {
+    if (number(minVal)) {
       minVal = parseFloat(minVal)
     }
   }
