@@ -314,12 +314,14 @@ describe('The Defy.js library', function () {
    */
   it('should be able to validate a required value', function () {
     expect(defy.required('test')).toBe(true)
+    expect(defy.required.call(this, 'test')).toBe(true)
     expect(defy.required(0)).toBe(true)
     expect(defy.required(1)).toBe(true)
 
     expect(defy.required()).toBe(false)
     expect(defy.required('')).toBe(false)
     expect(defy.required(' ')).toBe(false)
+    expect(defy.required.call(this, ' ')).toBe(false)
     expect(defy.required(undefined)).toBe(false)
     expect(defy.required(null)).toBe(false)
   })
