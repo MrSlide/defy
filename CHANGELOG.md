@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v1.0.0] - 2018-01-16
+### Added
+
+- Added password validation through `defy.password()`
+
+### Fixed
+
+- Fixed an issue in `defy.max()`, `defy.min()` and `defy.required()` that would cause issues when calling them from a function that had its `this` keyword set.
+
+### Breaking changes
+
+#### Removed
+
+- Removed UMD module distribution. Defy now needs to be loaded as an ES6 module.
+
+
+
 ## [v0.3.0] - 2017-06-22
 ### Added
 
@@ -90,6 +107,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Latest]: https://github.com/MrSlide/defy/tree/master
 [Unreleased]: https://github.com/MrSlide/defy/tree/develop
+[v1.0.0]: https://github.com/MrSlide/defy/tree/v1.0.0
 [v0.3.0]: https://github.com/MrSlide/defy/tree/v0.3.0
 [v0.2.3]: https://github.com/MrSlide/defy/tree/v0.2.3
 [v0.2.2]: https://github.com/MrSlide/defy/tree/v0.2.2
