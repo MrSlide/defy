@@ -32,8 +32,12 @@ const defy = require('defy')
 // Loading the module as an ES6 module
 import * as defy from 'defy'
 
+// It is also possible to only load the required validations when loading the module as an ES6 module (this is the preferred way)
+import {required, password} from 'defy'
+import {date as defyDate} from 'defy'
+
 // Loading the module as a global variable in the browser
-// You need to load defy in a script tag
+// You need to load defy in a script tag or include in a script bundle
 var defy = window.defy
 ```
 
@@ -361,6 +365,29 @@ Boolean
 
 ```
 var isValueNumeric = defy.number(123.45)
+```
+
+
+
+### password(value: String): Boolean
+
+Verify if a given value is a valid password.
+A password is considered valid if it is at least 6 characters long and only includes characters from the ASCII printable characters table excluding spaces.
+
+#### Params
+
+| Name                     | Type                     | Description                                                                                                     |
+|--------------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------|
+| value                    | String                   | The value to be validated.                                                                                      |
+
+#### Return
+
+Boolean
+
+#### Example
+
+```
+var isValueValid = defy.password('WowqGY0Gi?oaPnT,MwiJ[kBQ4ID29Hb!')
 ```
 
 
